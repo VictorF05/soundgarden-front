@@ -6,8 +6,8 @@ const data = document.querySelector('#data');
 const lotacao = document.querySelector('#lotacao');
 const form = document.querySelector('form');
 
-// Função assíncrona de criar novo evento
-async function criarNovoEvento(evento){
+// Função de criar novo evento
+function criarNovoEvento(evento){
   evento.preventDefault();
 
   function conversorData (textoData){ 
@@ -41,7 +41,7 @@ async function criarNovoEvento(evento){
     body: JSON.stringify(objeto),
   };
 
-  await fetch('https://xp41-soundgarden-api.herokuapp.com/events', options)
+  fetch('https://xp41-soundgarden-api.herokuapp.com/events', options)
     .then((dados) => {
       return dados.json();
     })
