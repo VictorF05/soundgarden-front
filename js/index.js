@@ -10,7 +10,7 @@ function mostrarEventos (evento){
         const p = document.createElement('p');
         const a = document.createElement('a');
 
-        article.classList.add('evento', 'p-5', 'm-3');
+        article.classList.add('evento', 'card', 'p-5', 'm-3');
         a.classList.add('btn', 'btn-primary');
 
         a.setAttribute('href', `reservas.html?id=${evento[index]._id}`)
