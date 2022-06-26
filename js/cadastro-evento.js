@@ -1,13 +1,13 @@
 const nome = document.querySelector('#nome');
-const poster = 'URL_DA_IMAGEM';
+const banner = document.querySelector('#banner');
 const atracoes = document.querySelector('#atracoes');
 const descricao = document.querySelector('#descricao');
 const data = document.querySelector('#data');
 const lotacao = document.querySelector('#lotacao');
 const form = document.querySelector('form');
 
-// Ao clicar cria elemento novo
-form.addEventListener('submit', (evento) => {
+// Função assíncrona de criar novo evento
+async function criarNovoEvento(evento){
   evento.preventDefault();
 
   function conversorData (textoData){ 
@@ -26,12 +26,12 @@ form.addEventListener('submit', (evento) => {
 
   const objeto = {
     name: nome.value,
-    poster: 'url da imagem',
+    poster: banner.value,
     attractions: arrayAtracoes,
     description: descricao.value,
     scheduled: dataConvertida,
     number_tickets: lotacao.value,
-    };
+  };
   
   const options = {
     method: 'POST',
@@ -39,16 +39,20 @@ form.addEventListener('submit', (evento) => {
     'Content-Type': 'application/json',
     },
     body: JSON.stringify(objeto),
-    };
+  };
 
-  fetch('https://xp41-soundgarden-api.herokuapp.com/events', options)
-  .then(dados => {
-    return dados.json();
-  })
-  .then(objeto => {
-    console.log(objeto);
-  })
-  .catch(e => {
-    console.log(e);
-  });
-})
+  await fetch('https://xp41-soundgarden-api.herokuapp.com/events', options)
+    .then((dados) => {
+      return dados.json();
+    })
+    .then((objeto) => {
+      alert(`Evento ${objeto.name} criado com sucesso!`);
+      window.location.replace('admin.html');
+    })
+    .catch((erro) => {
+      console.log(erro);
+    });
+} 
+
+// Chama a função de criar evento ao clicar em enviar
+form.addEventListener('submit', criarNovoEvento);
