@@ -46,12 +46,7 @@ function mostrarEventos (eventos){
     })
 }
 
-const options = {
-    method: 'GET',
-    headers: {},
-};
-
-fetch('https://xp41-soundgarden-api.herokuapp.com/events', options)
+fetch('https://xp41-soundgarden-api.herokuapp.com/events', {method: 'GET'})
     .then((resposta) => {
         return resposta.json();
     })
