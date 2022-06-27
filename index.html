@@ -1,88 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sound Garden</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sound Garden</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
-<body>
-    <header class=" d-flex justify-content-center align-items-center">
-        <img src="img/Sound-logo (1).png" width="300" alt="">
-    </header>
-    <main>
-        <section class="full d-flex justify-content-center align-items-center"
-            style="background-color: #F8BBD0; color: #fff">
-            <div class="text-center">
-                <h1>Adicione um banner maneiro aqui</h1>
-            </div>
-        </section>
-        <section class="full">
-            <div class="container text-center">
-                <h2>Próximos eventos</h2>
-            </div>
-            <div id="prox-eventos" class="container d-flex justify-content-center align-items-center">
-                
-            </div>
-            <div class="container text-center">
-                <a href="eventos.html" class="btn btn-secondary">ver todos os eventos</a>
-            </div>
-        </section>
-        <section class="full d-flex justify-content-center align-items-center"
-            style="background-color: #f2f2f2; color: #555">
-            <div class="container">
-                <div class="row d-flex justify-content-center align-items-center">
-                    <div class="col">
-                        <h2>A Sound Garden</h2>
-
-                        <p>Sound Garden é uma casa de show super descolada</p>
-
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id autem, fugiat recusandae, totam
-                            inventore harum iste libero obcaecati neque fugit ipsam. Dolorum quae quis odio rem at eum
-                            cumque excepturi.</p>
-                        <p>Alias animi nostrum aperiam sapiente laudantium
-                            corporis esse voluptatem, repellendus nam exercitationem reprehenderit error. Maiores
-                            quibusdam molestias adipisci magni maxime explicabo voluptatibus ipsum delectus, cum soluta
-                            esse ab ducimus. Molestias facilis hic quod similique, voluptate porro architecto itaque
-                            odit dolore temporibus, dignissimos magni delectus in?</p>
-                        <p>Nemo excepturi soluta provident minima amet? Architecto
-                            distinctio molestiae nisi necessitatibus nesciunt possimus dignissimos consequatur iusto
-                            cupiditate quam accusantium tempora odio at deleniti explicabo voluptatum blanditiis natus
-                            qui, dolorem ea eius minima itaque aspernatur? Quia voluptatem ex, mollitia consequuntur
-                            quas incidunt, aliquid explicabo nesciunt hic nobis libero velit at reiciendis.</p>
-                    </div>
-                    <div class="col">
-                        <img src="img/music.svg" width="500px">
+    <body>
+        <header class=" d-flex justify-content-center align-items-center">
+            <img src="img/Sound-logo (1).png" width="300" alt="">
+        </header>
+        <main>
+            <section class="full d-flex justify-content-center align-items-center"
+                style="background-color: #F8BBD0; color: #fff">
+                <div class="text-center">
+                    <h1>Adicione um banner maneiro aqui</h1>
+                </div>
+            </section>
+            <section class="full">
+                <div class="container text-center">
+                    <h2>Próximos eventos</h2>
+                </div>
+                <div id="prox-eventos" class="container d-flex justify-content-center align-items-center">
+                    <div class="modal fade" id="modal-reserva" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="nome-evento">Nome do Evento</h5>
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label">Nome:</label>
+                                            <input type="text" class="form-control" id="nome-pessoa">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Email:</label>
+                                            <input type="text"class="form-control" id="email-pessoa">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                    <button id="btn-reserva" type="button" class="btn btn-primary">Confirmar reserva</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+                <div class="container text-center">
+                    <a href="eventos.html" class="btn btn-secondary">ver todos os eventos</a>
+                </div>
+            </section>
+            <section class="full d-flex justify-content-center align-items-center"
+                style="background-color: #f2f2f2; color: #555">
+                <div class="container">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col">
+                            <h2>A Sound Garden</h2>
 
-    </main>
-    <footer>
-        <div class="container d-flex justify-content-center align-items-center">
-            <a href="#">
-                <img src="img/Sound-logo-black (1).png" width="200px" alt="">
-            </a>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="eventos.html">eventos</a>
-                    </li>
-                    <li>
-                        <a href="admin.html">painel administrativo</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-</body>
-<script src="./js/index.js"></script>
+                            <p>Sound Garden é uma casa de show super descolada</p>
+
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id autem, fugiat recusandae, totam
+                                inventore harum iste libero obcaecati neque fugit ipsam. Dolorum quae quis odio rem at eum
+                                cumque excepturi.</p>
+                            <p>Alias animi nostrum aperiam sapiente laudantium
+                                corporis esse voluptatem, repellendus nam exercitationem reprehenderit error. Maiores
+                                quibusdam molestias adipisci magni maxime explicabo voluptatibus ipsum delectus, cum soluta
+                                esse ab ducimus. Molestias facilis hic quod similique, voluptate porro architecto itaque
+                                odit dolore temporibus, dignissimos magni delectus in?</p>
+                            <p>Nemo excepturi soluta provident minima amet? Architecto
+                                distinctio molestiae nisi necessitatibus nesciunt possimus dignissimos consequatur iusto
+                                cupiditate quam accusantium tempora odio at deleniti explicabo voluptatum blanditiis natus
+                                qui, dolorem ea eius minima itaque aspernatur? Quia voluptatem ex, mollitia consequuntur
+                                quas incidunt, aliquid explicabo nesciunt hic nobis libero velit at reiciendis.</p>
+                        </div>
+                        <div class="col">
+                            <img src="img/music.svg" width="500px">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container d-flex justify-content-center align-items-center">
+                <a href="#">
+                    <img src="img/Sound-logo-black (1).png" width="200px" alt="">
+                </a>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="eventos.html">eventos</a>
+                        </li>
+                        <li>
+                            <a href="admin.html">painel administrativo</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+    <script src="./js/index.js"></script>
 </html>
