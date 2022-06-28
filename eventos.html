@@ -22,7 +22,34 @@
                 <h2>Todos os Eventos</h2>
             </div>
             <div id="todos-eventos" class="container d-flex justify-content-center align-items-center flex-wrap">
-
+                <div class="modal fade" id="modal-reserva" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="nome-evento">Nome do Evento</h5>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <span>&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Nome:</label>
+                                        <input type="text" class="form-control" id="nome-pessoa">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Email:</label>
+                                        <input type="text"class="form-control" id="email-pessoa">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                <button id="btn-reserva" type="button" class="btn btn-primary">Confirmar reserva</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="full d-flex justify-content-center align-items-center"
