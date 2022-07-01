@@ -11,9 +11,26 @@
 </head>
 
 <body>
+    <header class="d-flex justify-content-around align-items-center bg-light d-block d-xl-none">
+        <a href="./index.html">
+            <img src="img/Sound-logo.png" width="120">
+        </a>
+        <div class="dropdown">
+            <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              menu
+            </a>
+          
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="./admin.html">Eventos</a>
+              <a class="dropdown-item" href="./admin.html">Funcionários</a>
+              <a class="dropdown-item" href="./admin.html">Usuários</a>
+              <a class="dropdown-item" href="./index.html">Landing Page</a>
+            </div>
+          </div>
+    </header>
     <div class="container-fluid">
         <div class="row">
-            <aside class="d-flex flex-column flex-shrink-0 p-3 bg-light col-2">
+            <aside class="d-none d-xl-flex flex-column p-3 bg-light col-2">
 
                 <a href="./index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                     <svg class="bi me-2" width="40" height="32">
@@ -51,14 +68,14 @@
                 <hr>
 
             </aside>
-            <main class="col-9  p-5">
+            <main class="col-12 col-xl-9  p-3 p-md-5">
                 <div class="my-5">
-                    <h1>Novo evento</h1>
+                    <h1 class="text-center text-xl-left">Novo evento</h1>
 
                 </div>
                 <div>
                     <!-- - cadastro de evento (nome, atrações, descrição, horário, data, numero de ingressos) -->
-                    <form class="col-6">
+                    <form class="d-flex flex-column col-12 col-xl-6">
                         <div class="mb-3">
                             <label for="nome" class="form-label">Nome</label>
                             <input type="text" class="form-control" id="nome" aria-describedby="nome">
@@ -85,7 +102,7 @@
                             <label for="lotacao" class="form-label">Lotação (número de ingressos disponiveis)</label>
                             <input type="number" class="form-control" id="lotacao" aria-describedby="lotacao">
                         </div>
-                        <button type="submit" class="btn btn-primary">enviar</button>
+                        <button type="submit" class="btn btn-primary align-self-center align-self-xl-start">enviar</button>
                     </form>
                 </div>
             </main>
