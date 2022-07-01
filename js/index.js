@@ -49,7 +49,7 @@ function mostrarEventos (evento){
         const cardBody = document.createElement('div');
         const cardFooter = document.createElement('div');
 
-        article.classList.add('evento', 'card', 'text-center','p-4', 'p-sm-5', 'm-2', 'm-sm-3', 'w-auto');
+        article.classList.add('evento', 'card', 'text-center','p-4', 'p-sm-5', 'm-3', 'w-auto');
         button.classList.add('btn', 'btn-primary');
         cardHeader.classList.add('card-header', 'bg-white', 'border-0', 'p-0', 'm-0');
         cardBody.classList.add('card-body');
