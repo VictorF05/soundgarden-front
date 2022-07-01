@@ -34,6 +34,10 @@ main.login {
     width: 400px;
 }
 
+main div h1 {
+    font-size: 38px;
+}
+
 section.full{
     width: 100%;
     min-height: 80vh;

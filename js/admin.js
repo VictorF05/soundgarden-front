@@ -22,9 +22,13 @@ function mostrarEventos (eventos){
 
         tdAtracoes.innerText = evento.attractions.join(',');
 
+        thIndex.classList.add('d-none', 'd-xl-table-cell');
+        tdData.classList.add('d-none', 'd-sm-table-cell');
+        tdAtracoes.classList.add('d-none', 'd-xl-table-cell');
+
         btnReserva.setAttribute('href', `reservas.html?id=${evento._id}`);
         btnReserva.classList.add('btn', 'btn-dark');
-        btnReserva.innerText = 'ver reservas';
+        btnReserva.innerText = 'reservas';
 
         btnEditar.setAttribute('href', `editar-evento.html?id=${evento._id}`);
         btnEditar.classList.add('btn', 'btn-secondary');
