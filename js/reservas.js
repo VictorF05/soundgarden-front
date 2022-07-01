@@ -16,6 +16,8 @@ function mostrarReservas (reservas){
         thIndex.setAttribute('scope', 'row');
         thIndex.innerText = index + 1;
 
+        thIndex.classList.add('d-none', 'd-xl-table-cell');
+
         tdName.innerText = reserva.owner_name;
         tdEmail.innerText = reserva.owner_email;
         tdQuantidade.innerText = reserva.number_tickets;
