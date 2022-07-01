@@ -3,6 +3,19 @@ Uma casa de show chamada Sound Garden será inaugurada e precisa de um site que
 exiba os eventos e permita que os clientes reservem ingressos através da Landing Page.
 O site está separado em duas partes:
 
+1- Landing Page:
+Permite visualizar eventos e reservar ingressos.
+
+2- Painel Administrativo:
+Permite criar, editar e excluir eventos.
+
+Disponibilizamos o código HTML e CSS do painel de controle para que você foque no
+desenvolvimento Javascript.
+A API está pronta para receber esses dados e seu desafio será fazer a integração do
+front-end com o back-end.
+Vocês poderão consultar a seguinte documentação da api:
+https://documenter.getpostman.com/view/3028053/UVsTp2LC
+
 FUNCIONALIDADES OBRIGATÓRIAS
 Painel de controle
 1. Criar Evento: receba os dados que o usuário inserir através do formulário da
